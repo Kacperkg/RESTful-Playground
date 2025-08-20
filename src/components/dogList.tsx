@@ -47,7 +47,7 @@ function DogListFetcher() {
   console.log(`these are the breeds ${dogBreeds}  testing`)
 
   return (
-    <div style={{ textAlign: 'center', margin: '20px' }}>
+    <div className="text-center">
       <h1>List of Dogs(with Axios)</h1>
       {dogBreeds && !isLoading ? (
         <ul>
@@ -56,6 +56,7 @@ function DogListFetcher() {
               <strong>{breedName}</strong>
               {subBreedsArray.length > 0 && (
                 <span>
+                  <br />
                   (Sub-breeds:{' '}
                   <ul>
                     {subBreedsArray.map((subBreed) => (
